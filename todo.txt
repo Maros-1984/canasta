@@ -1,0 +1,2 @@
+next step:
+display random 14 cards
