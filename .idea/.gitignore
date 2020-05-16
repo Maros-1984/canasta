@@ -6,3 +6,6 @@
 /dataSources.local.xml
 /gradle.xml
 /jarRepositories.xml
+/compiler.xml
+/modules
+/inspectionProfiles

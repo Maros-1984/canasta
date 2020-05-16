@@ -9,8 +9,8 @@ buildscript {
 }
 
 plugins {
-    id 'java-library'
     id 'war'
+    id 'jacoco'
 }
 
 apply plugin: 'com.google.cloud.tools.appengine'
@@ -23,8 +23,13 @@ dependencies {
     implementation 'com.google.appengine:appengine-api-1.0-sdk:+'
     implementation 'jstl:jstl:1.2'
     compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
 
+    testCompileOnly 'org.projectlombok:lombok:1.18.12'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.16.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.0'
     testImplementation 'com.google.appengine:appengine-testing:+'
     testImplementation 'com.google.appengine:appengine-api-stubs:+'
@@ -45,3 +50,16 @@ test {
     useJUnitPlatform()
     testLogging.showStandardStreams = true
 }
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 1.00
+            }
+        }
+    }
+}
+
+check.dependsOn jacocoTestCoverageVerification
+jacocoTestCoverageVerification.dependsOn jacocoTestReport

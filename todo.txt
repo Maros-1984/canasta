@@ -1,2 +1,2 @@
 next step:
-display random 14 cards
+display the same 14 cards for each player's view

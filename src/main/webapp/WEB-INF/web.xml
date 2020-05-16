@@ -4,11 +4,11 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <servlet>
-        <servlet-name>comingsoon</servlet-name>
-        <servlet-class>com.vranec.canasta.HelloWorldServlet</servlet-class>
+        <servlet-name>canasta-game</servlet-name>
+        <jsp-file>/game.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>comingsoon</servlet-name>
+        <servlet-name>canasta-game</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 </web-app>
