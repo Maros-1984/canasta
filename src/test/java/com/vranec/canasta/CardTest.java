@@ -15,4 +15,8 @@ class CardTest {
         assertThat(Card.CLUBS_6.getSuit()).isEqualTo("clubs");
     }
 
+    @Test
+    void getValue_returnsCardValue() {
+        assertThat(Card.CLUBS_6.getValue()).isEqualTo(5);
+    }
 }

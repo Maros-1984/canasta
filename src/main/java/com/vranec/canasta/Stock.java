@@ -6,6 +6,7 @@ import java.util.EnumSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Random;
 
 public class Stock {
     private final Queue<Card> cards;
@@ -16,7 +17,7 @@ public class Stock {
         cards.addAll(EnumSet.allOf(Card.class));
         cards.add(Card.JOKER);
         cards.add(Card.JOKER);
-        Collections.shuffle(cards);
+        Collections.shuffle(cards, new Random());
         this.cards = new LinkedList<>(cards);
     }
 

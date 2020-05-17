@@ -22,6 +22,8 @@ repositories {
 dependencies {
     implementation 'com.google.appengine:appengine-api-1.0-sdk:+'
     implementation 'jstl:jstl:1.2'
+    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
     compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
     annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
@@ -34,6 +36,8 @@ dependencies {
     testImplementation 'com.google.appengine:appengine-testing:+'
     testImplementation 'com.google.appengine:appengine-api-stubs:+'
     testImplementation 'com.google.appengine:appengine-tools-sdk:+'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '3.3.3'
+    testImplementation 'javax.servlet:javax.servlet-api:3.1.0'
 }
 
 appengineDeploy.dependsOn check

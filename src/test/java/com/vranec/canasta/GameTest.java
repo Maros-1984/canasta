@@ -16,6 +16,6 @@ class GameTest {
     void newGame_shouldDeal14CardsToEachPlayer() {
         Game game = new Game();
 
-        assertThat(game.getPlayers().get(0).getHand()).hasSize(14);
+        assertThat(game.getPlayer(0).getHand()).hasSize(14);
     }
 }

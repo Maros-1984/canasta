@@ -1,2 +1,2 @@
 next step:
-display the same 14 cards for each player's view
+display all anticipated sections of the game (hand, other players sizes of hands, stock, discard pile, go out section, game rounds)
